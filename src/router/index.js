@@ -11,15 +11,25 @@ const routes = [
     component: Home,
   },
   {
-    path: "/about",
-    name: "About",
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue"),
+    path: "/calendar",
+    name: "Calendar",
+    component: () => import("../views/Calendar.vue"),
+  },
+  {
+    path: "/tournament_table",
+    name: "TournamentTable",
+    component: () => import("../views/TournamentTable.vue"),
+  },
+  {
+    path: "/teams",
+    name: "Teams",
+    component: () => import("../views/Teams.vue"),
   },
 ];
 
 const router = new VueRouter({
   routes,
+  mode: "history"
 });
 
 export default router;
