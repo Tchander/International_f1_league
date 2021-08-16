@@ -25,11 +25,17 @@ const routes = [
     name: "Teams",
     component: () => import("../views/Teams.vue"),
   },
+  {
+    path: "/team/:teamName",
+    name: "Team",
+    component: () => import("../views/Team.vue"),
+    props: true,
+  },
 ];
 
 const router = new VueRouter({
   routes,
-  mode: "history"
+  mode: "history",
 });
 
 export default router;

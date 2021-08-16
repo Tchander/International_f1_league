@@ -30,6 +30,13 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 5px 15px;
+  background-color: #0f3368;
+  /*background-color: #2a76e6;*/
+  /*background-color: #2aaae6;*/
+  /*background-color: rgb(66, 6, 1);*/
+  /*background-color: rgb(166, 33, 22);*/
+  border-radius: 5px;
 }
 .logo__link {
   display: flex;
@@ -46,18 +53,24 @@ export default {
   margin-left: 20px;
   text-decoration: none;
   list-style-type: none;
-  color: #cee2f6;
+  color: #fff;
+  font-weight: 700;
 }
 .logo__home:hover {
+  /*color: rgb(95, 2, 2);*/
+  /*color: #1a202c;*/
   color: #fff;
 }
 .navigation__link {
   text-decoration: none;
   list-style-type: none;
   margin-left: 35px;
-  color: #cee2f6;
+  color: #fff;
+  font-weight: 700;
 }
 .navigation__link:hover {
+  /*color: rgb(95, 2, 2);*/
+  /*color: #1a202c;*/
   color: #fff;
 }
 </style>
