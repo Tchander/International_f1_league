@@ -1,5 +1,10 @@
 <template>
-  <nav class="navigation">
+  <nav
+    class="navigation"
+    :class="{
+      'light-grey': color === 'lightGrey',
+    }"
+  >
     <router-link class="logo__link" to="/">
       <img class="logo__img" src="../assets/img/il_logo.jpg" alt="logo" />
       <div class="logo__home">Главная</div>
@@ -19,6 +24,11 @@
 <script>
 export default {
   name: "Navigation",
+  props: {
+    color: {
+      type: String,
+    },
+  },
 };
 </script>
 
@@ -37,6 +47,9 @@ export default {
   /*background-color: rgb(66, 6, 1);*/
   /*background-color: rgb(166, 33, 22);*/
   border-radius: 5px;
+}
+.navigation.light-grey {
+  background-color: #242c41;
 }
 .logo__link {
   display: flex;

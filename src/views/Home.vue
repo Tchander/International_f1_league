@@ -1,9 +1,16 @@
 <template>
   <div class="home">
-    <header-banner :is-home="true" />
+    <header-banner />
     <div class="il__container">
       <navigation />
-      <home-slider />
+      <video
+        src="../assets/video/il_introduction.webm"
+        autoplay
+        loop
+        controls
+        muted
+        width="1200px"
+      ></video>
     </div>
     <footer-info />
   </div>
@@ -12,12 +19,11 @@
 <script>
 import Navigation from "../components/Navigation";
 import HeaderBanner from "../components/HeaderBanner";
-import HomeSlider from "../components/HomeSlider";
 import FooterInfo from "../components/FooterInfo";
 
 export default {
   name: "Home",
-  components: { FooterInfo, HomeSlider, HeaderBanner, Navigation },
+  components: { FooterInfo, HeaderBanner, Navigation },
 };
 </script>
 

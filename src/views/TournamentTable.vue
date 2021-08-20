@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header-banner :is-home="false" />
+    <header-banner />
     <div class="il__container">
       <navigation />
     </div>

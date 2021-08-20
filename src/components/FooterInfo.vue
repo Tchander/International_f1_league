@@ -1,7 +1,17 @@
 <template>
-  <v-footer color="#0f3368">
+  <v-footer
+    class="il__footer"
+    :class="{
+      'light-grey': color === 'lightGrey',
+    }"
+  >
     <v-card flat tile class="il__footer__card">
-      <v-card-text class="il__footer__card__text">
+      <v-card-text
+        class="il__footer__card__text"
+        :class="{
+          'light-grey': color === 'lightGrey',
+        }"
+      >
         <v-btn
           class="il__footer_card__button"
           v-for="icon in icons"
@@ -57,6 +67,11 @@
 <script>
 export default {
   name: "FooterInfo",
+  props: {
+    color: {
+      type: String,
+    },
+  },
   data: () => ({
     icons: ["mdi-vk", "mdi-telegram", "mdi-youtube", "mdi-discord"],
   }),
@@ -64,17 +79,26 @@ export default {
 </script>
 
 <style scoped>
+.il__footer.il__footer.il__footer {
+  background-color: #0f3368;
+}
+.il__footer.il__footer.il__footer.light-grey {
+  background-color: #242c41;
+}
 .il__footer__card {
   width: 100%;
   color: #fff;
   border-radius: 5px;
 }
 .il__footer__card__text {
-  /*background-color: #2aaae6;*/
+  /*background-color: #2aah6;*/
   background-color: #0f3368;
   /*background-color: #2a76e6;*/
   /*background-color: rgb(66, 6, 1);*/
   color: #fff;
+}
+.il__footer__card__text.light-grey {
+  background-color: #242c41;
 }
 .il__footer_card__button {
   margin: 0 20px;
